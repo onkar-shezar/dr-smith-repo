@@ -1,0 +1,11 @@
+<ion-view title="Tasks">
+        <ion-content ng-init="gettasks()">
+                <ion-list>
+                        <ion-item ng-repeat="task in menteetasks">
+<a href="#/app/mentee_task_comments/{{task.id}}"> {{task.tasks}}  </a>
+                           
+   <a><img src="{{url}}/myproject/download.php?nama={{task.file_url}}" width="40" height="40" alt="error"></a>
+                         </ion-item>
+                 </ion-list>
+        </ion-content>
+</ion-view>

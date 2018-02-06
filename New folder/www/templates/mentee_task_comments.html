@@ -1,0 +1,15 @@
+<ion-view title="TaskComments ">
+        <ion-content ng-init="getcomments_on_task()">
+            <ion-list>
+                <ion-item ng-repeat="comment in task_comments">
+                      comment:  {{comment.comment_text}}
+                        <br>
+                        comment by: {{comment.comment_by}}
+                </ion-item>
+            </ion-list>
+            <label class="item item-input item-floating-label">
+                    <input type="text" id="commentbox" placeholder="Add Comment Here" ng-model="comment">
+            </label>
+            <button class="button button-block button-positive" ng-click="addcomment_on_task(comment)">Comment</button>
+        </ion-content>
+    </ion-view>

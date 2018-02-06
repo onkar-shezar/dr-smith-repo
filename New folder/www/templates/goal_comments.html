@@ -1,0 +1,15 @@
+<ion-view title="GoalComments">
+        <ion-content ng-init="getcomments()">
+            <ion-list>
+                <ion-item ng-repeat="comment in goal_comments">
+                     comment: {{comment.comment_text}}
+                     <br>  
+                      comment by: {{comment.comment_by}}
+                </ion-item>
+            </ion-list>
+            <label class="item item-input item-floating-label">
+                    <input type="text" id="commentbox" placeholder="Add Comment Here" ng-model="comment">
+            </label>
+            <button class="button button-block button-positive" ng-click="addcomment(comment)">Comment</button>
+        </ion-content>
+    </ion-view>

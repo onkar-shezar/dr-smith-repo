@@ -1,0 +1,16 @@
+<ion-view title="InteractionsComments">
+        <ion-content ng-init="getintercomments()">
+                
+            <ion-list> 
+                <ion-item ng-repeat="intercomment in intercomments">
+                       comment: {{intercomment.comment_text}}
+                        <br />
+                        comment by:{{intercomment.comment_by}}
+                </ion-item>
+            </ion-list>
+            <label class="item item-input item-floating-label">
+                    <input type="text" id="commentbox" placeholder="Add Comment Here" ng-model="comment">
+            </label>
+            <button class="button button-block button-positive" ng-click="addintercomment(comment)">Comment</button>
+        </ion-content>
+</ion-view>
